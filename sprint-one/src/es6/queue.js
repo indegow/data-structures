@@ -13,8 +13,10 @@ class Queue {
 
   dequeue() {
     let temp = this.storage[this.tail];
-    if (this.size() > 0) delete this.storage[this.tail++];
-    return temp;
+    if (this.size() > 0) {
+      delete this.storage[this.tail++];
+    }
+    return temp; 
   }
 
   size() {

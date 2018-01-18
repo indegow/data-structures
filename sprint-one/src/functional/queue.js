@@ -25,13 +25,3 @@ var Queue = function() {
 
   return someInstance;
 };
-
-let line = Queue();
-line.enqueue('tom')
-line.enqueue('ding')
-line.enqueue('wang')
-line.dequeue();
-line.dequeue();
-line.dequeue();
-line.dequeue();
-console.log(line.size())

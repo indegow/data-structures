@@ -12,7 +12,9 @@ class Stack {
 
   pop() {
     let temp = this.storage[this.counter];
-    if (this.size() > 0) delete this.storage[this.counter--];
+    if (this.size() > 0) {
+      delete this.storage[this.counter--];
+    }
     return temp;
   }
 

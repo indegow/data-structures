@@ -12,14 +12,16 @@ var queueMethods = {};
 
 queueMethods.enqueue = function(value) {
   this.storage[this.head++] = value;
-}
+};
 
 queueMethods.dequeue = function() {
   let temp = this.storage[this.tail];
-  if (this.size() > 0) delete this.storage[this.tail++];
+  if (this.size() > 0) {
+    delete this.storage[this.tail++];
+  }
   return temp;
-}
+};
 
 queueMethods.size = function() {
   return this.head - this.tail;
-}
+};

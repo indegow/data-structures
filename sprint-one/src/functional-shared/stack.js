@@ -14,11 +14,11 @@ var stackMethods = {};
 
 stackMethods.push = function(value) {
   this.storage[++this.counter] = value;
-}
+};
 
 stackMethods.size = function() {
   return this.counter;
-}
+};
 
 stackMethods.pop = function() {
   let temp = this.storage[this.counter];
@@ -26,4 +26,4 @@ stackMethods.pop = function() {
     delete this.storage[this.counter--];
   }
   return temp;
-}
+};

@@ -6,14 +6,16 @@ var Stack = function() {
 };
 Stack.prototype.push = function(value) {
   this.storage[++this.counter] = value;
-}
+};
 
 Stack.prototype.pop = function() {
   let temp = this.storage[this.counter];
-  if (this.size() > 0) delete this.storage[this.counter--];
+  if (this.size() > 0) {
+    delete this.storage[this.counter--];
+  }
   return temp;
-}
+};
 
 Stack.prototype.size = function() {
   return this.counter;
-}
+};
